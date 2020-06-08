@@ -5,7 +5,7 @@ Name: Scott Hazelhurst
 Date: 7 June
 
 
-# Description of code -- for question 1 and 2
+# Description of code -- for question 1.1 and 1.2
 
 The program `datamunger.py` is used to quality check data files. A
 sample data file is given. The first row consists of headings which
