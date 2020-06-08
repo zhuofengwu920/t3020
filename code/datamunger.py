@@ -1,5 +1,3 @@
-
-
 import urllib
 import urllib.request
 import ssl
@@ -17,25 +15,24 @@ origin=sys.argv[1]
 
 def calc_total(curr):
     computed=0
-    for c in curr[2:9]: #E1
+    for c in curr[1:9]: #E1
         computed=computed+c
     return computed
 
 
-def check_monotonic(prev,curr):
+def check_monotonic(n, prev,curr):
    # Now check monotonicity and update  prev so next time round we compare
    # against this row
-    for i in range(9):
-        if curr[i] <=  prev[i]:  #E2
+    for i in range(1,8):
+        if curr[i] <  prev[i]:  #E2
             print("Monotonic error at column %d comparing lines %d and %d  "%(i,n-1,n),
                      "values %d and %d"%(curr[i],prev[i]))
         prev[i]=curr[i]  
 
 
 def check_row(n, prev, curr_str):
-    data = []
     curr = []
-    for d in curr_str: #E3
+    for d in curr_str[:-1]: #E3
         try:
             v = int(d)
             curr.append(v)
@@ -45,7 +42,7 @@ def check_row(n, prev, curr_str):
     if computed != curr[0]:
         print("Sum error at line ",n, curr_str,
               "computed %d and expected %d"%(computed, curr[0]))
-    check_monotonic(prev, curr)
+    check_monotonic(n, prev, curr)
     return True # if there all data was there
 
 
