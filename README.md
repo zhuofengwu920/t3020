@@ -38,4 +38,13 @@ E2++2: In the print statement, the n value used was a global rather than it been
 
 E2++2 fix: Add n as an additional paremeter
 
-E3: 
+
+E3: The program counts the empty OTHER column when it was not suppose to.
+
+E3 fix: Have the list leave out the last element in the for loop by changing curr_str to curr_str[:-1]
+
+E3++: The data[] list was never used and do not know the intent of it
+
+E3++fix: data[] removed
+
+Note: Please run 'python3 -m unittest discover test' rather than 'python3 -m unittest discover'

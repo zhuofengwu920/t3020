@@ -33,7 +33,6 @@ def check_monotonic(n, prev,curr):
 
 
 def check_row(n, prev, curr_str):
-    data = []
     curr = []
     for d in curr_str[:-1]: #E3
         try:
@@ -69,6 +68,5 @@ for  line in inp:
      str_vals  = get_text(line).strip().split(",")
      ok = check_row(n,prev,str_vals)
      if not ok:
-         print(n)
          missing = missing+1
 print("There were ",missing," missing lines")

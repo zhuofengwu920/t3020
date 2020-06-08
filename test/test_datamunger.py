@@ -85,11 +85,11 @@ class TestDatamunger(unittest.TestCase):
             n = 50
 
             test_prev = [35,2,3,4,5,6,7,8,9,10]
-            test_curr = [68,3,6,4,9,6,23,8,9,10]
+            test_curr = [68,'',6,4,9,6,23,8,9,10]
 
             result = code.check_row(n, test_prev, test_curr)
 
-            self.assertTrue(result)
+            self.assertFalse(result)
 
 
 
