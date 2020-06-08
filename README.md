@@ -20,3 +20,22 @@ Note, however, there is some missing data in some of the rows. The first few lin
 ### Errors
 
 There are three deliberate errors, marked E1, E2 and E3. Finding other (non-deliberate and unknown to me)  errors will get a bonus -- clearly add below this line in your copy of the README what the errors are and how you fixed them.
+
+E1: The row list was ran from index 2-9 which mean it was ran from T2 - T8, rather than the desired T1 - T8.
+
+E1 fix: The index range was changed from [2:9] to [1:9]
+
+
+E2: The check also errors out if they are equal, while that was not intended.
+
+E2 fix: The comparison operator changed from <= to <
+
+E2++(bonus?): The loop runs for 9 times, but the loop should run from T1 - T7 with total to be 7 times. Excluding the TALL due to TALL includes T8 as part of the sum
+
+E2++ fix: Change the loop's range from (7) to (1,8)
+
+E2++2: In the print statement, the n value used was a global rather than it been pass through as a paremeter. It would be better to pass it as a paremeter to keep it consistent(as the check_row had it as a paremeter)
+
+E2++2 fix: Add n as an additional paremeter
+
+E3: 
